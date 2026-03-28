@@ -3,7 +3,7 @@ import { PageHeader } from '@/components/navbar';
 import { AgentControlPanel } from '@/components/agent-control-panel';
 
 export const metadata = {
-  title: 'AI Agents - Null Pointer',
+  title: 'AI Agents',
   description: 'AI Agent Control Panel',
 };
 

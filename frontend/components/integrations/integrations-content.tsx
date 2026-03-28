@@ -505,7 +505,7 @@ export function IntegrationsContent() {
                   </h2>
                   <p className="text-muted-foreground text-sm mt-1">
                     {modalStep === 'gallery' 
-                      ? 'Choose a service to integrate with Null Pointer' 
+                      ? 'Choose a service to integrate with Cura' 
                       : `Set up the connection for your ${selectedService?.name} instance`}
                   </p>
                 </div>

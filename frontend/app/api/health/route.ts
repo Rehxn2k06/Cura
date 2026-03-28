@@ -5,7 +5,7 @@ export async function GET() {
     { 
       status: 'healthy',
       timestamp: new Date().toISOString(),
-      service: 'null-pointer-app'
+      service: 'Cura-app'
     },
     { status: 200 }
   );

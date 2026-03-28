@@ -1,8 +1,8 @@
 version: "3.8"
 
 services:
-  null-pointer:
-    container_name: null-pointer-app
+  Cura:
+    container_name: Cura-app
     build:
       context: .
       dockerfile: Dockerfile

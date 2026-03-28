@@ -97,7 +97,7 @@ export default function SignupPage() {
               ← Back to Login
             </Link>
             <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
-              Create your Null Pointer account
+              Create your Cura account
             </h1>
             <p className="text-gray-700 dark:text-muted-foreground font-medium">
               Choose your plan and get started
