@@ -6186,5 +6186,889 @@
       "service": "cart-service",
       "command": "kubectl rollout restart deployment/cart-service"
     }
+  },
+  {
+    "ts": "2026-03-28T17:36:48.871021+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:36:50.841603+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:37:09.048686+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:37:12.118664+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:37:19.287079+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:37:49.752226+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:38:03.782003+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:38:35.321573+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:38:37.238243+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:38:44.482679+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:38:47.550991+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:39:11.970175+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:39:24.131334+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:39:45.425711+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:40:26.692464+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:41:31.886554+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:41:56.220245+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:44:26.810715+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:45:12.574158+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:45:55.772249+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:08.153206+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:20.549096+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:46.754361+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:49.960782+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:53.127377+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:56.327794+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:46:59.504198+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:02.651130+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:05.795448+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:08.940127+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:12.115044+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:15.355860+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:18.508534+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:21.708288+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:24.911155+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:28.092700+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:31.267794+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:34.503350+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:37.685592+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:40.846896+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:43.949057+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:47.074596+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:50.299282+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:53.518171+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:56.728536+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:47:59.965491+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:03.752903+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:07.853223+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:11.847544+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:15.076679+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:18.246554+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:21.481984+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:24.663066+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:27.849010+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:29.359798+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:31.024038+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:34.214416+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:37.451520+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:40.623247+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:43.794060+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:46.975142+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:50.172131+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:53.352470+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:48:59.653569+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:49:05.939081+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T17:52:19.075356+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "scale_deployment",
+      "service": "database-service",
+      "command": "kubectl scale deployment database-service --replicas=3"
+    }
+  },
+  {
+    "ts": "2026-03-28T18:11:40.811494+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T18:12:09.531096+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
   }
 ]
