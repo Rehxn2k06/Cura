@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  null-pointer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    command: npm run dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+    ports:
+      - "3000:3000"
+    user: root # Development often needs root for volume permissions on Windows
