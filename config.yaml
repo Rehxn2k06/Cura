@@ -1,0 +1,66 @@
+# AIOps Platform Configuration
+
+platform:
+  name: "AIOps Observability Platform"
+  version: "2.0.0"
+
+# 6-service e-commerce topology (Online Boutique style)
+# Topology: frontend -> [catalogue -> db, cart -> order -> payment -> db]
+services:
+  - name: "frontend-service"
+    dependencies: ["catalogue-service", "cart-service"]
+  - name: "catalogue-service"
+    dependencies: ["database-service"]
+  - name: "cart-service"
+    dependencies: ["order-service"]
+  - name: "order-service"
+    dependencies: ["payment-service"]
+  - name: "payment-service"
+    dependencies: ["database-service"]
+  - name: "database-service"
+    dependencies: []
+
+streaming:
+  backend: "memory"  # "memory" or "kafka"
+  kafka_bootstrap: "localhost:9092"
+  topic: "metrics-stream"
+  buffer_size: 1000
+
+features:
+  rolling_window: 10
+  z_score_threshold: 2.5
+
+detection:
+  model: "ensemble"          # isolation_forest + lstm
+  contamination: 0.05
+  anomaly_threshold: 0.70   # Raised: IF alone needs ~0.85 to flag, LSTM assists
+  if_weight: 0.75            # IF dominates — more reliable on synthetic data
+  lstm_weight: 0.25          # LSTM assists — catches degradation IF misses
+  lstm_seq_len: 10           # LSTM input window length
+  lstm_hidden: 8             # LSTM hidden units (small = fast)
+  lstm_epochs: 40            # Training epochs on normal data
+  model_path: "detection/model_store"
+
+rca:
+  dependency_weight_decay: 0.8
+  confidence_threshold: 0.5
+
+decision:
+  rules:
+    database-service: "scale_db"
+    payment-service: "restart_pod"
+    order-service: "restart_pod"
+    cart-service: "restart_pod"
+    catalogue-service: "restart_pod"
+    frontend-service: "alert"
+    default: "alert"
+
+remediation:
+  dry_run: true  # Set false only with real K8s cluster
+  namespace: "default"
+  audit_log: "audit_log.json"
+  scale_replicas: 3
+
+simulation:
+  normal_interval_s: 2
+  failure_duration_s: 30

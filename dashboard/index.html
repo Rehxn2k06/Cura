@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AIOps Observability Platform</title>
+  <meta name="description" content="Real-time distributed system anomaly detection, root cause analysis, and automated Kubernetes remediation dashboard." />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<div class="app-wrapper">
+
+  <!-- ── Header ── -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-text">
+        <h1>AIOps Platform</h1>
+        <p>Observability &amp; Remediation</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="pipeline-status-badge" id="pipeline-badge">
+        <div class="pulse-dot" id="pulse-dot"></div>
+        <span id="badge-text">Initializing…</span>
+      </div>
+      <button class="btn btn-danger" id="btn-inject" onclick="injectFailure()">💥 Inject DB Failure</button>
+      <button class="btn btn-success" id="btn-clear" onclick="clearFailure()" style="display:none">✅ Clear Failure</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── Cycle Stats ── -->
+    <section>
+      <div class="section-label">Pipeline Stats</div>
+      <div class="cycle-row">
+        <div class="cycle-stat"><div class="cycle-stat-num" id="cycle-count">0</div><div class="cycle-stat-label">Cycles</div></div>
+        <div class="cycle-stat"><div class="cycle-stat-num" id="anomaly-count">0</div><div class="cycle-stat-label">Anomalous Services</div></div>
+        <div class="cycle-stat"><div class="cycle-stat-num" id="last-rca">—</div><div class="cycle-stat-label">Root Cause</div></div>
+        <div class="cycle-stat"><div class="cycle-stat-num" id="confidence-stat">—</div><div class="cycle-stat-label">Confidence</div></div>
+      </div>
+    </section>
+
+    <!-- ── Service Cards ── -->
+    <section>
+      <div class="section-label">Live Service Metrics &amp; Anomaly Heatmap</div>
+      <div class="services-row" id="services-row">
+        <!-- Populated by JS — 6 service cards -->
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+        <div class="service-card"><div class="no-data">Waiting for data…</div></div>
+      </div>
+    </section>
+
+    <!-- ── Bottom grid: RCA + Audit ── -->
+    <div class="bottom-grid">
+
+      <!-- RCA Panel -->
+      <div class="rca-panel">
+        <div class="card-title">🔍 Root Cause Analysis</div>
+        <div class="rca-result-box" id="rca-box">
+          <div class="no-data">Analyzing…</div>
+        </div>
+      </div>
+
+      <!-- Audit Log -->
+      <div class="audit-panel">
+        <div class="card-title">📋 Remediation Audit Log</div>
+        <div class="audit-list" id="audit-list">
+          <div class="no-data">No actions yet</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── Dependency Graph ── -->
+    <section>
+      <div class="graph-panel">
+        <div class="card-title">🌐 Service Dependency Graph</div>
+        <div class="graph-visual" id="graph-visual">
+          <!-- JS renders branching 2-row layout -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
