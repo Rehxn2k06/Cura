@@ -16,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api.models import (
     AnomalyResult, RCAResult, Decision, AuditRecord,
-    SimulateRequest, PipelineStatus,
+    SimulateRequest, PipelineStatus, AlertEmailRequest
 )
 from pipeline.pipeline import AIOPipeline
 
@@ -187,6 +187,17 @@ async def clear_audit_log():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
     return {"status": "cleared"}
+
+
+# ─── Config ───────────────────────────────────────────────────────────────────
+@app.post("/config/alert-email", tags=["Configuration"])
+async def set_alert_email(request: AlertEmailRequest):
+    """Update alerting email dynamically from frontend user session."""
+    if pipeline and pipeline.notifier:
+        pipeline.notifier.registered_email = request.email
+        print(f"[API] Alert destination securely updated to: {request.email}")
+        return {"status": "success", "email": request.email}
+    raise HTTPException(status_code=500, detail="Notifier is not ready")
 
 
 # ─── Full state (for dashboard polling) ──────────────────────────────────────

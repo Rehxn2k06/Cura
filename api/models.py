@@ -50,3 +50,7 @@ class PipelineStatus(BaseModel):
     last_cycle_ts: float
     failure_active: bool
     failure_services: List[str]
+
+
+class AlertEmailRequest(BaseModel):
+    email: str

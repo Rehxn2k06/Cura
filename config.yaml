@@ -57,11 +57,13 @@ decision:
 
 alerting:
   enabled: true
-  registered_email: "admin@example.com"
-  smtp_server: "localhost"
-  smtp_port: 1025
-  smtp_user: ""
-  smtp_password: ""
+  unresolved_duration_threshold_s: 45
+  cooldown_s: 180
+  registered_email: "admin@example.com" # <--- Put the recipient user's email here
+  smtp_server: "smtp.gmail.com"
+  smtp_port: 587
+  smtp_user: "ghargisaniya@gmail.com"
+  smtp_password: "klqjqximvqqlnhrs"
 
 remediation:
   dry_run: true  # Set false only with real K8s cluster

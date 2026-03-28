@@ -31,6 +31,13 @@ export default function DashboardPage() {
     }
   }, [isAuthenticated]);
 
+  // Synchronize Firebase user email with backend alert notifier
+  useEffect(() => {
+    if (isAuthenticated && user?.email) {
+      import('@/lib/api').then((mod) => mod.api.setAlertEmail(user.email!));
+    }
+  }, [isAuthenticated, user?.email]);
+
   if (!isAuthenticated || !user) {
     return (
       <div className="min-h-screen bg-white dark:bg-[#05070D] flex items-center justify-center relative z-10">

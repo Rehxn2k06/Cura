@@ -111,4 +111,12 @@ export const api = {
   /** Manually execute the current pipeline decision */
   executeDecision: () =>
     safeFetch<{ status: string; record: Record<string, unknown> }>(`${BASE}/execute`, { method: 'POST' }),
+
+  /** Dynamically map Firebase User session to backend alert destination */
+  setAlertEmail: (email: string) =>
+    safeFetch<{ status: string; email: string }>(`${BASE}/config/alert-email`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    }),
 };

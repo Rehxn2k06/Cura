@@ -129,7 +129,7 @@ class AIOPipeline:
             self.state.anomaly_results = anomaly_results
 
             # Check and send alerts for critical concurrent anomalies
-            self.notifier.check_and_send_alert(anomaly_results)
+            self.notifier.check_and_send_alert(self.state)
 
             # RCA
             rca_result = self.rca_engine.analyze(anomaly_results)
