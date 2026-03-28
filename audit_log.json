@@ -2572,5 +2572,70 @@
       "service": "catalogue-service",
       "command": "kubectl rollout restart deployment/catalogue-service"
     }
+  },
+  {
+    "ts": "2026-03-28T13:33:06.218658+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T13:33:30.411800+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "order-service",
+      "command": "kubectl rollout restart deployment/order-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T13:33:54.605771+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "payment-service",
+      "command": "kubectl rollout restart deployment/payment-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T13:34:18.772050+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
+  },
+  {
+    "ts": "2026-03-28T13:35:42.013405+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": true,
+    "result": {
+      "status": "dry_run",
+      "action": "restart_pod",
+      "service": "cart-service",
+      "command": "kubectl rollout restart deployment/cart-service"
+    }
   }
 ]
