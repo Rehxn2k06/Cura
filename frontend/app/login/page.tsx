@@ -9,7 +9,7 @@ import { useAuthStore, initializeAuth } from '@/lib/auth-store';
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState('demo@nullpointer.com');
+  const [email, setEmail] = useState('demo@cura.com');
   const [password, setPassword] = useState('demo123');
   const [showPassword, setShowPassword] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
@@ -105,7 +105,7 @@ export default function LoginPage() {
               Demo credentials:
             </p>
             <p className="text-xs text-blue-800 dark:text-white mt-1 font-semibold">
-              demo@nullpointer.com / demo123
+              demo@cura.com / demo123
             </p>
           </motion.div>
 
