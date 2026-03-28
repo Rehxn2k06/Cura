@@ -19,6 +19,7 @@ from graph.dependency_graph import ServiceDependencyGraph
 from rca.rca_engine import RCAEngine
 from decision.decision_engine import DecisionEngine
 from remediation.remediation import RemediationEngine
+from pipeline.notifier import EmailNotifier
 
 
 def load_config(path: str = "config.yaml") -> dict:
@@ -97,6 +98,9 @@ class AIOPipeline:
             scale_replicas=rem_cfg["scale_replicas"],
         )
 
+        # Email Notifier
+        self.notifier = EmailNotifier(cfg)
+
     # ─── Ingestion Loop ──────────────────────────────────────────────────────
 
     async def ingestion_loop(self, interval_s: float = 2.0):
@@ -123,6 +127,9 @@ class AIOPipeline:
             # Anomaly detection
             anomaly_results = self.detector.detect(self.extractor)
             self.state.anomaly_results = anomaly_results
+
+            # Check and send alerts for critical concurrent anomalies
+            self.notifier.check_and_send_alert(anomaly_results)
 
             # RCA
             rca_result = self.rca_engine.analyze(anomaly_results)

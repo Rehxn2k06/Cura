@@ -55,6 +55,14 @@ decision:
     frontend-service: "alert"
     default: "alert"
 
+alerting:
+  enabled: true
+  registered_email: "admin@example.com"
+  smtp_server: "localhost"
+  smtp_port: 1025
+  smtp_user: ""
+  smtp_password: ""
+
 remediation:
   dry_run: true  # Set false only with real K8s cluster
   namespace: "default"
