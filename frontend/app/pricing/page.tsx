@@ -85,7 +85,7 @@ export default function PricingPage() {
         {/* FOOTER */}
         <footer className="border-t border-border mt-16 py-8">
           <div className="max-w-7xl mx-auto px-4 text-center text-muted-foreground text-sm">
-            <p>&copy; 2024 Cura. All rights reserved.</p>
+            <p> 2024 Cura. All rights reserved.</p>
           </div>
         </footer>
 
