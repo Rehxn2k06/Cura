@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  frontend-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always
+
+  catalogue-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always
+
+  cart-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always
+
+  order-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always
+
+  payment-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always
+
+  database-service:
+    image: alpine:latest
+    command: tail -f /dev/null
+    restart: always

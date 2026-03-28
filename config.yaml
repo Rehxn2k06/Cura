@@ -57,7 +57,7 @@ decision:
 
 alerting:
   enabled: true
-  unresolved_duration_threshold_s: 45
+  unresolved_duration_threshold_s: 30
   cooldown_s: 180
   registered_email: "admin@example.com" # <--- Put the recipient user's email here
   smtp_server: "smtp.gmail.com"
@@ -66,7 +66,7 @@ alerting:
   smtp_password: "klqjqximvqqlnhrs"
 
 remediation:
-  dry_run: true  # Set false only with real K8s cluster
+  dry_run: false  # Executes real Docker restarts
   namespace: "default"
   audit_log: "audit_log.json"
   scale_replicas: 3

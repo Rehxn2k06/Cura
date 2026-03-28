@@ -143,6 +143,15 @@ class AIOPipeline:
             if decision.get("auto_remediate") and rca_result.get("root_cause"):
                 audit_record = self.remediation.execute(decision)
                 self.state.audit_log = self.remediation.get_audit_log()
+                
+                # If remediation successfully restarted the Docker container, normalize that specific service's metric!
+                if audit_record.get("cleared_simulator"):
+                    root_service = rca_result.get("root_cause")
+                    if root_service in self.state.failure_services:
+                        self.state.failure_services.remove(root_service)
+                    # Turn off global failure active flag if no more anomalies exist
+                    if not self.state.failure_services:
+                        self.state.failure_active = False
 
             self.state.cycle_count += 1
             self.state.last_cycle_ts = time.time()
