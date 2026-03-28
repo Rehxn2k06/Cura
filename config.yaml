@@ -33,7 +33,7 @@ features:
 detection:
   model: "ensemble"          # isolation_forest + lstm
   contamination: 0.05
-  anomaly_threshold: 0.70   # Raised: IF alone needs ~0.85 to flag, LSTM assists
+  anomaly_threshold: 0.62   # Tuned: ensemble reliably fires on real degradation
   if_weight: 0.75            # IF dominates — more reliable on synthetic data
   lstm_weight: 0.25          # LSTM assists — catches degradation IF misses
   lstm_seq_len: 10           # LSTM input window length

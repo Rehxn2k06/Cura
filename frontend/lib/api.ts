@@ -103,4 +103,12 @@ export const api = {
   /** Clear active failure simulation */
   clearFailure: () =>
     safeFetch<{ status: string }>(`${BASE}/clear`, { method: 'POST' }),
+
+  /** Clear the audit log */
+  clearAudit: () =>
+    safeFetch<{ status: string }>(`${BASE}/audit/clear`, { method: 'POST' }),
+
+  /** Manually execute the current pipeline decision */
+  executeDecision: () =>
+    safeFetch<{ status: string; record: Record<string, unknown> }>(`${BASE}/execute`, { method: 'POST' }),
 };

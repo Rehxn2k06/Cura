@@ -158,6 +158,37 @@ async def clear_failure():
     return {"status": "cleared"}
 
 
+# ─── Execute current decision manually ───────────────────────────────────────
+@app.post("/execute", tags=["Remediation"])
+async def execute_decision():
+    """
+    Manually execute the current pipeline decision via the remediation engine.
+    Returns the resulting audit record. Works in dry_run mode.
+    """
+    decision = pipeline.state.decision
+    if not decision or decision.get("action") == "no_action":
+        raise HTTPException(status_code=400, detail="No actionable decision available.")
+    record = pipeline.remediation.execute(decision)
+    pipeline.state.audit_log = pipeline.remediation.get_audit_log()
+    return {"status": "executed", "record": record}
+
+
+# ─── Clear audit log ──────────────────────────────────────────────────────────
+@app.post("/audit/clear", tags=["Remediation"])
+async def clear_audit_log():
+    """Wipe the audit log (useful to reset 'Resolved Today' counter)."""
+    import json
+    from pathlib import Path
+    log_path = Path(pipeline.remediation.audit_log_path)
+    try:
+        with open(log_path, "w") as f:
+            json.dump([], f)
+        pipeline.state.audit_log = []
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+    return {"status": "cleared"}
+
+
 # ─── Full state (for dashboard polling) ──────────────────────────────────────
 @app.get("/state", tags=["Dashboard"])
 async def get_full_state():

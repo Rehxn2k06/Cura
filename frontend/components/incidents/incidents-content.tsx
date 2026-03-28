@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, CheckCircle, AlertCircle, Clock, Zap, Shield, Activity } from 'lucide-react';
+import { Search, X, CheckCircle, AlertCircle, Clock, Zap, Shield, Activity, RefreshCw, Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { useDashboardStore, serviceLabel } from '@/lib/store';
 import { api } from '@/lib/api';
@@ -82,10 +82,13 @@ const getStatusColor = (status: string) =>
 
 export function IncidentsContent() {
   const { services, auditLog, pipelineStatus } = useDashboardStore();
+  const executeDecision = useDashboardStore((s) => s.executeDecision);
   const [selectedIncident, setSelectedIncident] = useState<Incident | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const [severityFilter, setSeverityFilter] = useState<string>('all');
   const [statusFilter, setStatusFilter] = useState<string>('all');
+  const [executing, setExecuting] = useState(false);
+  const [clearingAudit, setClearingAudit] = useState(false);
 
   // Build incidents list from live data
   const incidents = useMemo<Incident[]>(() => {
@@ -104,19 +107,48 @@ export function IncidentsContent() {
     return matchesSearch && matchesSeverity && matchesStatus;
   });
 
-  const handleTriggerFix = async (inc: Incident) => {
+  /**
+   * Execute the current RCA decision via the backend remediation engine.
+   * This is the correct "AI Fix" — NOT re-injecting a failure.
+   */
+  const handleExecuteDecision = async () => {
+    setExecuting(true);
+    try {
+      const res = await executeDecision();
+      if (res?.status === 'executed') {
+        toast.success('🤖 Decision executed — check audit log for details', { duration: 4000 });
+      } else {
+        toast.error('No actionable decision available — wait for anomaly detection or inject a failure first');
+      }
+    } catch {
+      toast.error('Execution failed');
+    } finally {
+      setExecuting(false);
+    }
+  };
+
+  /** Inject a failure for the anomalous service to showcase detection → decision flow */
+  const handleInjectForService = async (inc: Incident) => {
     if (!inc.backendId) {
-      toast.info('No specific service target — triggering global failure injection');
+      toast.info('No specific service target');
       return;
     }
-    const res = await api.simulate([inc.backendId], 30);
-    if (res) toast.success(`AI remediation triggered for ${inc.service}`);
+    const res = await api.simulate([inc.backendId], 60);
+    if (res) toast.success(`⚡ Failure injected into ${inc.service}`);
     else     toast.error('Backend unreachable');
   };
 
   const handleClearFailure = async () => {
     const res = await api.clearFailure();
-    if (res) toast.success('Failure cleared — system recovering');
+    if (res) toast.success('✅ Failure cleared — system recovering');
+  };
+
+  const handleClearAudit = async () => {
+    setClearingAudit(true);
+    const res = await api.clearAudit();
+    setClearingAudit(false);
+    if (res) toast.success('Audit log cleared');
+    else toast.error('Backend unreachable');
   };
 
   return (
@@ -131,20 +163,47 @@ export function IncidentsContent() {
           <div className="flex items-center gap-3">
             <Activity className="w-4 h-4 text-orange-600 dark:text-orange-400 animate-pulse" />
             <span className="text-sm font-semibold text-orange-700 dark:text-orange-300">
-              ⚠️ Active failure simulation — {pipelineStatus.failureServices.length} services affected
+              ⚠️ Active failure simulation — {pipelineStatus.failureServices.map(serviceLabel).join(', ')}
             </span>
           </div>
-          <button
-            onClick={handleClearFailure}
-            className="text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg transition-colors"
-          >
-            Clear Failure
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={handleExecuteDecision}
+              disabled={executing}
+              className="flex items-center gap-1.5 text-xs font-semibold bg-purple-600 hover:bg-purple-700 disabled:opacity-50 text-white px-3 py-1.5 rounded-lg transition-colors"
+            >
+              {executing ? <RefreshCw className="w-3 h-3 animate-spin" /> : <Zap className="w-3 h-3" />}
+              Execute Decision
+            </button>
+            <button
+              onClick={handleClearFailure}
+              className="text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-lg transition-colors"
+            >
+              Clear Failure
+            </button>
+          </div>
         </motion.div>
       )}
 
       {/* Search & Filter Bar */}
       <div className="glass card-glow border border-gray-300 dark:border-white/10 p-4 rounded-2xl space-y-4">
+        <div className="flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-500 dark:text-white/40 font-medium">
+              {filtered.length} incident{filtered.length !== 1 ? 's' : ''}
+            </span>
+            {auditLog.length > 0 && (
+              <button
+                onClick={handleClearAudit}
+                disabled={clearingAudit}
+                className="flex items-center gap-1 text-xs text-gray-400 hover:text-red-400 transition-colors disabled:opacity-50"
+              >
+                {clearingAudit ? <RefreshCw className="w-3 h-3 animate-spin" /> : <Trash2 className="w-3 h-3" />}
+                Reset log
+              </button>
+            )}
+          </div>
+        </div>
         <div className="flex flex-col md:flex-row gap-4">
           <div className="flex-1 relative">
             <Search className="absolute left-3 top-3 w-4 h-4 text-gray-600 dark:text-gray-400" />
@@ -274,15 +333,28 @@ export function IncidentsContent() {
 
               {selectedIncident.status === 'active' && (
                 <div className="pt-4 space-y-2 border-t border-gray-300 dark:border-white/10">
+                  {/* Execute the RCA engine's current decision (scale_db / restart_pod / alert) */}
                   <button
-                    onClick={() => handleTriggerFix(selectedIncident)}
-                    className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-green-500 dark:hover:bg-green-600 text-white font-semibold py-2 rounded-lg transition-colors"
+                    id="execute-rca-decision-btn"
+                    onClick={handleExecuteDecision}
+                    disabled={executing}
+                    className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 disabled:opacity-60 text-white font-semibold py-2.5 rounded-xl transition-all"
                   >
-                    Trigger AI Fix
+                    {executing ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Zap className="w-4 h-4" />}
+                    {executing ? 'Executing…' : 'Execute RCA Decision'}
+                  </button>
+                  {/* Inject failure for THIS specific service to trigger cascade detection */}
+                  <button
+                    id="inject-service-failure-btn"
+                    onClick={() => handleInjectForService(selectedIncident)}
+                    className="w-full flex items-center justify-center gap-2 border border-red-500/50 text-red-400 hover:bg-red-500/10 font-semibold py-2 rounded-xl transition-colors text-sm"
+                  >
+                    <Activity className="w-3.5 h-3.5" />
+                    Inject Failure for {selectedIncident.service}
                   </button>
                   <button
                     onClick={handleClearFailure}
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-lg transition-colors"
+                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2 rounded-xl transition-colors text-sm"
                   >
                     Clear & Resolve
                   </button>

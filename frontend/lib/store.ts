@@ -112,6 +112,7 @@ interface DashboardStore {
   syncFromBackend: (state: BackendState) => void;
   syncAuditLog: (entries: BackendAuditEntry[]) => void;
   setConnected: (v: boolean) => void;
+  executeDecision: () => Promise<{ status: string; record: Record<string, unknown> } | null>;
 
   // Actions — agent controls
   updateMetrics: (metrics: Partial<DashboardMetrics>) => void;
@@ -209,7 +210,7 @@ function mapBackendState(data: BackendState, prev: DashboardStore): Partial<Dash
   // Latency line chart — snapshot points (append to existing history, cap at 20)
   const now = new Date();
   const timeLabel = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
-  const newLatencyPoint: Record<string, string | number> = { name: timeLabel };
+  const newLatencyPoint: { name: string; [key: string]: string | number } = { name: timeLabel };
   services.forEach((s) => { newLatencyPoint[s.name.replace(' Service', '')] = s.latency; });
   const latencyHistory = [...prev.latencyData, newLatencyPoint].slice(-20);
 
@@ -298,17 +299,30 @@ export const useDashboardStore = create<DashboardStore>((set, get) => ({
       targetServiceLabel: e.target_service ? serviceLabel(e.target_service) : null,
       dryRun: e.dry_run,
     }));
+
+    // Count only entries from TODAY to avoid stale audit log inflating the counter
+    const todayPrefix = new Date().toISOString().slice(0, 10); // 'YYYY-MM-DD'
+    const resolvedToday = entries.filter(
+      (e) => e.action !== 'no_action' && e.ts.startsWith(todayPrefix)
+    ).length;
+
     set((prev) => ({
       auditLog: mapped,
       metrics: {
         ...prev.metrics,
         aiActionsExecuted: entries.length,
-        resolvedToday: entries.filter((e) => e.action !== 'no_action').length,
+        resolvedToday,
       },
     }));
   },
 
   setConnected: (v) => set({ isConnected: v }),
+
+  executeDecision: async () => {
+    const { api } = await import('./api');
+    const res = await api.executeDecision();
+    return res;
+  },
 
   // ── Agent control actions (UI-only state) ─────────────────────────────────
   updateMetrics: (m) => set((prev) => ({ metrics: { ...prev.metrics, ...m } })),

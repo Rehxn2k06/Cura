@@ -8,6 +8,7 @@ import { PageHeader } from '@/components/navbar';
 import { MetricCards } from '@/components/metric-cards';
 import { DashboardCharts } from '@/components/charts';
 import { ServiceHealth } from '@/components/service-health';
+import { ControlPanel } from '@/components/control-panel';
 import { useAuthStore } from '@/lib/auth-store';
 import { startPolling, stopPolling } from '@/lib/store';
 import { Loader2 } from 'lucide-react';
@@ -63,6 +64,9 @@ export default function DashboardPage() {
 
           {/* Charts */}
           <DashboardCharts />
+
+          {/* Control Panel: Inject Failure + RCA Decision */}
+          <ControlPanel />
 
           {/* Service Health */}
           <ServiceHealth />
