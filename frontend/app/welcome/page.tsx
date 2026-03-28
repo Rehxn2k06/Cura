@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ArrowRight, Zap, Shield, Gauge } from 'lucide-react';
 
 export const metadata = {
-  title: 'Null Pointer — AI Observability Platform',
+  title: 'Cura — AI Observability Platform',
   description: 'Enterprise-grade AI-powered incident management and observability',
 };
 
@@ -80,7 +80,7 @@ export default function WelcomePage() {
         <section className="pb-32 px-4">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-3xl font-bold text-foreground text-center mb-16">
-              Why Teams Choose Null Pointer
+              Why Teams Choose Cura
             </h3>
 
             <div className="grid md:grid-cols-3 gap-8">
@@ -175,7 +175,7 @@ export default function WelcomePage() {
         {/* Footer */}
         <footer className="border-t border-border py-8 px-4">
           <div className="max-w-7xl mx-auto text-center text-muted-foreground text-sm">
-            <p>&copy; 2024 Null Pointer. All rights reserved.</p>
+            <p>&copy; 2024 Cura. All rights reserved.</p>
           </div>
         </footer>
       </div>

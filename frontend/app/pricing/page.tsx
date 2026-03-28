@@ -48,7 +48,7 @@ export default function PricingPage() {
             {/* LOGO */}
             <Link href="/" className="text-xl font-bold">
               <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-                Null Pointer
+                Cura
               </span>
             </Link>
           </div>
@@ -85,7 +85,7 @@ export default function PricingPage() {
         {/* FOOTER */}
         <footer className="border-t border-border mt-16 py-8">
           <div className="max-w-7xl mx-auto px-4 text-center text-muted-foreground text-sm">
-            <p>&copy; 2024 Null Pointer. All rights reserved.</p>
+            <p>&copy; 2024 Cura. All rights reserved.</p>
           </div>
         </footer>
 

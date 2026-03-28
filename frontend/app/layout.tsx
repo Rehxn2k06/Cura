@@ -9,7 +9,7 @@ import './globals.css'
 const geist = Geist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Null Pointer — AI Observability',
+  title: 'Cura ',
   description: 'Enterprise AI Observability & Incident Management',
 }
 

@@ -73,7 +73,7 @@ export default function LoginPage() {
         {/* Header */}
         <motion.div variants={itemVariants} className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-clip-text text-transparent mb-3">
-            Null Pointer
+            Cura
           </h1>
           <p className="text-gray-800 dark:text-muted-foreground text-sm font-semibold">
             AI Observability Platform
