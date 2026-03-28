@@ -20,7 +20,7 @@ export default function WelcomePage() {
         <nav className="flex items-center justify-between pt-6 px-8 max-w-7xl mx-auto">
           <h1 className="text-2xl font-bold">
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
-              Null Pointer
+              CURA
             </span>
           </h1>
           <div className="flex gap-4">

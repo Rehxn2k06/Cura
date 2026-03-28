@@ -34,7 +34,7 @@ export function TopNav() {
         <div className="flex items-center gap-12">
           <h1 className="text-xl font-bold">
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-green-400 dark:to-cyan-400 bg-clip-text text-transparent">
-              Null Pointer
+              CURA
             </span>
           </h1>
 
