@@ -240,7 +240,7 @@ class LSTMServiceDetector:
         raw = np.array([self._extract_raw(r) for r in normal_records], dtype=float)
 
         self._mu = raw.mean(axis=0)
-        self._sigma = raw.std(axis=0)
+        self._sigma = np.clip(raw.std(axis=0), 1e-5, None)
         norm = self._normalise(raw)
 
         # Build sliding-window (X, y) pairs

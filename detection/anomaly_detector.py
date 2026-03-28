@@ -93,13 +93,73 @@ class AnomalyDetectionEngine:
             for svc in services
         }
 
+    def _get_smd_records(self, n_samples: int) -> list:
+        """
+        Reads `n_samples` from the Kaggle SMD dataset concurrently for all services.
+        Yields a list of records for each timestamp (one for each service).
+        """
+        import os
+        smd_dir = Path(__file__).parent.parent / "data" / "ServerMachineDataset" / "train"
+        if not smd_dir.exists():
+            return []
+
+        # Open files for all services mapped deterministically
+        file_handles = []
+        for i, svc in enumerate(self.services):
+            group = (i // 8) + 1
+            idx = (i % 8) + 1
+            fname = f"machine-{group}-{idx}.txt"
+            fpath = smd_dir / fname
+            if fpath.exists():
+                file_handles.append((svc, open(fpath, "r")))
+            else:
+                file_handles.append((svc, None))
+
+        snapshot_list = []
+        for _ in range(n_samples):
+            records = []
+            has_data = False
+            for svc, f in file_handles:
+                if f:
+                    line = f.readline()
+                    if line:
+                        cols = [float(x) for x in line.strip().split(",")]
+                        if len(cols) >= 5:
+                            records.append({
+                                "service": svc,
+                                "cpu": cols[0] * 100.0,
+                                "memory": cols[1] * 100.0,
+                                "latency": cols[2] * 1000.0,
+                                "error_rate": cols[3] * 100.0,
+                                "throughput": cols[4] * 1000.0,
+                            })
+                            has_data = True
+                            continue
+                records.append({
+                    "service": svc,
+                    "cpu": 0.0, "memory": 0.0, "latency": 0.0, "error_rate": 0.0, "throughput": 0.0
+                })
+            
+            if not has_data:
+                break
+            snapshot_list.append(records)
+
+        for svc, f in file_handles:
+            if f:
+                f.close()
+                
+        return snapshot_list
+
     def load_or_train(self, extractor: FeatureExtractor,
                       n_normal_samples: int = 250) -> None:
         """
-        Load persisted models or train from scratch on synthetic normal data.
+        Load persisted models or train from scratch on Kaggle SMD data or fallback.
         IF and LSTM are trained independently.
         """
         from ingestion.metrics_simulator import generate_snapshot
+
+        # Pre-load Kaggle SMD data once if available
+        smd_snapshots = self._get_smd_records(n_normal_samples + 15)
 
         for svc in self.services:
             if_det = self._if_detectors[svc]
@@ -117,17 +177,31 @@ class AnomalyDetectionEngine:
             if_vectors = []
             raw_records = []
 
-            for _ in range(n_normal_samples + 15):
-                for record in generate_snapshot():
-                    ext.ingest(record)
-                    if record["service"] == svc:
-                        raw_records.append(record)
-                        lstm_det.push(record)
-                vec = ext.to_feature_vector(svc)
-                if vec is not None:
-                    if_vectors.append(vec)
-                if len(if_vectors) >= n_normal_samples:
-                    break
+            # 1. Try training using Kaggle data if available
+            if smd_snapshots:
+                for snapshot in smd_snapshots:
+                    for record in snapshot:
+                        ext.ingest(record)
+                        if record["service"] == svc:
+                            raw_records.append(record)
+                            lstm_det.push(record)
+                            
+                    vec = ext.to_feature_vector(svc)
+                    if vec is not None:
+                        if_vectors.append(vec)
+            else:
+                print(f"[ADE] Kaggle SMD missing. Using metrics_simulator for {svc}.")
+                for _ in range(n_normal_samples + 15):
+                    for record in generate_snapshot():
+                        ext.ingest(record)
+                        if record["service"] == svc:
+                            raw_records.append(record)
+                            lstm_det.push(record)
+                    vec = ext.to_feature_vector(svc)
+                    if vec is not None:
+                        if_vectors.append(vec)
+                    if len(if_vectors) >= n_normal_samples:
+                        break
 
             # Train IF
             if not if_loaded and if_vectors:
