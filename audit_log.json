@@ -10001,5 +10001,1797 @@
       "restarted_at": "2026-03-28T20:54:44.964835+00:00",
       "output": "Fuzzy restart successful for a1d20889ca07"
     }
+  },
+  {
+    "ts": "2026-03-28T20:56:24.365845+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T20:56:22.647956+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T20:58:27.979137+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T20:58:26.131050+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T20:59:39.854717+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T20:59:37.972204+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:13:17.347100+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:13:15.454336+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:14:33.770776+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:14:31.991621+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:14:47.910023+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:14:46.162132+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:15:08.688124+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:15:06.537435+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:16:21.873692+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:16:19.939648+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:16:51.757412+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:16:49.899006+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:18:08.074789+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:18:06.032373+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:18:22.590279+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:18:20.539692+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:18:46.314175+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:18:44.397846+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:21:42.626368+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:21:40.507033+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:23:14.605732+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:23:12.654279+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:23:53.953967+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:23:51.837596+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:24:02.221472+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:24:00.206761+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:37:21.033276+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:25:04.104316+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:45:05.591973+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:45:03.622794+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:45:10.769171+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:45:08.792800+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:45:41.471842+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:45:39.449964+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:45:49.913991+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:45:47.745665+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:45:55.257752+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:45:53.216043+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:03.372477+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:01.527093+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:14.885947+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:12.789830+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:20.047346+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:18.071915+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:31.520085+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:29.497281+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:46.052369+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:44.030998+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:46:54.176156+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:46:52.331149+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:47:30.377951+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:47:28.371096+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:47:35.509550+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:47:33.573425+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:47:40.672536+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:47:38.735325+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-28T23:48:26.018470+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-28T23:48:24.077782+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:35:11.344882+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:35:08.874088+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:35:16.772764+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:35:14.617407+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:35:44.456571+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:35:42.178968+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:35:49.943955+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:35:47.716057+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:35:55.473508+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:35:53.235951+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:36:16.805948+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:36:14.505696+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:36:22.332908+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:36:20.069119+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:40:17.358191+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:40:15.679216+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:41:10.581401+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:41:08.925905+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:42:16.987101+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:42:14.753036+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:42:32.199027+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:42:29.872375+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:43:09.389716+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:43:07.277446+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:43:30.497351+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:43:28.312151+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T00:43:35.877115+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T00:43:33.764352+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:30:05.736925+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:30:02.473396+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:30:26.522970+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:30:24.730534+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:32:44.929087+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:32:42.611839+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:49:36.271123+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:49:34.480104+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:50:06.203610+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:50:04.198860+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:50:48.067769+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:50:46.331098+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:50:59.124760+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:50:57.363893+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:51:10.167018+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:51:08.429679+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:52:11.327539+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:52:08.916221+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:54:40.955689+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:54:39.156640+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:54:45.850386+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:54:44.124510+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:54:53.823585+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:54:52.104270+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:55:54.068218+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:55:52.304409+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:57:59.869190+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:57:58.036493+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:59:31.157068+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:59:29.386192+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:59:39.179298+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:59:37.381592+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T04:59:56.401667+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T04:59:54.657383+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:01:18.258730+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:01:16.504214+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:02:09.464987+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:02:07.542351+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:02:39.012449+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:02:37.247594+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:03:26.964843+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:03:25.235490+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:03:47.395483+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:03:45.529516+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:04:23.267756+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:04:21.525661+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:04:52.795949+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:04:51.066910+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:07:16.450175+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:07:14.739972+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:08:13.813450+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:08:12.092810+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:08:40.626346+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:08:38.624156+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:10:13.337421+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:10:10.493063+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:12:40.268054+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:12:38.449172+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:13:06.863026+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:13:04.990618+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:13:58.107179+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:13:56.346120+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:15:39.067714+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:15:37.192748+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:15:47.137798+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:15:45.355830+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:15:52.053120+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:15:50.291534+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:16:15.603325+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:16:13.712311+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:16:33.016209+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:16:31.157458+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:16:47.195171+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:16:45.418055+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:17:41.647926+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:17:39.728769+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:17:49.775264+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:17:47.876699+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:17:57.864653+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:17:56.027161+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:18:12.007224+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:18:10.256717+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:18:32.324097+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:18:30.612263+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:19:32.888641+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:19:31.064313+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:19:41.383444+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:19:39.230562+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:19:47.432865+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:19:45.379466+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:20:02.476686+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:20:00.120680+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:21:27.709942+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:21:25.891415+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:22:00.329293+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:21:58.506697+00:00",
+      "output": "Fuzzy restart successful for 87038d7f926b"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:22:14.983680+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:22:12.729046+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T05:24:07.580369+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T05:24:05.543661+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:36:23.005482+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:36:19.416614+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:36:35.549116+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:36:33.770385+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:38:06.190062+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:38:04.239088+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:38:35.716132+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:38:33.928779+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:39:17.671325+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:39:15.826355+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:41:01.436458+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:40:59.715965+00:00",
+      "output": "Fuzzy restart successful for f0a58808a915"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:41:06.912045+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:41:04.621560+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:41:55.244224+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:41:53.451787+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-29T17:42:21.718618+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-29T17:42:19.947645+00:00",
+      "output": "Fuzzy restart successful for 7900ebbca1fa"
+    }
+  },
+  {
+    "ts": "2026-03-31T08:33:44.131721+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-31T08:33:41.938066+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-31T08:34:43.710702+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-31T08:34:41.883982+00:00",
+      "output": "Fuzzy restart successful for 920889616ea1"
+    }
+  },
+  {
+    "ts": "2026-03-31T08:35:29.412961+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-31T08:35:27.671175+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-03-31T08:36:26.667872+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "success",
+      "restarted_at": "2026-03-31T08:36:24.912412+00:00",
+      "output": "Fuzzy restart successful for a1d20889ca07"
+    }
+  },
+  {
+    "ts": "2026-04-03T20:05:31.613477+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=cart-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:06:48.981561+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:07:27.022028+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:08:42.255715+00:00",
+    "action": "restart_pod",
+    "target_service": "catalogue-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=catalogue-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:08:45.895274+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:23.801602+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:27.475784+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:31.392342+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:35.013936+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:38.673454+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:42.416012+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:46.151439+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:49.882947+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:52.950252+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:53.708804+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:09:57.461776+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:01.095335+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:04.706037+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:08.347588+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:12.023816+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:15.973229+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:19.596116+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:32.635516+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:36.168303+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:10:42.900043+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:11:02.124728+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=cart-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:12:27.168302+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:12:30.840192+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:12:34.446389+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:12:38.106353+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:13:25.687436+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=cart-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:13:44.692863+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=cart-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:12.070515+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:28.191516+00:00",
+    "action": "restart_pod",
+    "target_service": "order-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=order-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:31.960359+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:35.583467+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:39.271988+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:15:43.008042+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:16:24.210416+00:00",
+    "action": "restart_pod",
+    "target_service": "payment-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=payment-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:17:42.659024+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:17:46.351051+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:17:50.034514+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:17:53.761236+00:00",
+    "action": "scale_db",
+    "target_service": "database-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=database-service']' returned non-zero exit status 1."
+    }
+  },
+  {
+    "ts": "2026-04-03T20:17:57.568159+00:00",
+    "action": "restart_pod",
+    "target_service": "cart-service",
+    "confidence": 1.0,
+    "dry_run": false,
+    "result": {
+      "status": "error",
+      "error": "Fuzzy search failed: Command '['docker', 'ps', '-q', '-f', 'name=cart-service']' returned non-zero exit status 1."
+    }
   }
 ]

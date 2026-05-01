@@ -1,104 +1,267 @@
-# AIOps Observability Platform
+# CURA : Real-Time AIOps for Detection, RCA & Autonomous Remediation
 
-Real-time, end-to-end AIOps system for distributed microservices — anomaly detection, root cause analysis, and automated Kubernetes remediation, all within ~15 seconds.
+---
 
-## 🏗 Architecture
+##  Overview
+
+**CURA** is a real-time AIOps system designed to:
+- detect anomalies before failures escalate
+- identify true root causes using causal reasoning
+- trigger automated remediation actions
+
+> Detect → Diagnose → Act
+
+---
+
+##  Motivation
+
+Traditional systems:
+- react after failure
+- ignore inter-service dependencies
+- rely on brute-force restarts or alerts
+
+CURA focuses on **causality, not correlation**.
+
+---
+
+##  System Architecture
 
 ```
-Metrics/Logs/Traces → Kafka (in-memory) → Feature Engineering
-→ IsolationForest → Dependency Graph → RCA Engine
-→ Decision Engine → Kubernetes Remediation
+            +----------------------+
+            |  Metrics / Logs /   |
+            |      Traces         |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            |   Ingestion Layer    |
+            | (Prometheus/Loki/    |
+            |     Jaeger Sim)      |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            |   Streaming Layer    |
+            | (Kafka-like system)  |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            | Feature Engineering  |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            |  Anomaly Detection   |
+            | (IF + LSTM)          |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            | Dependency Graph     |
+            | (NetworkX)           |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            | RCA Engine           |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            | Decision Engine      |
+            +----------+----------+
+                       |
+                       v
+            +----------------------+
+            | Remediation Layer    |
+            | (Kubernetes)         |
+            +----------------------+
 ```
 
-## 📁 Project Structure
+---
+
+##  Pipeline Breakdown
+
+### 1. Data Ingestion
+
+Simulated observability stack:
+- Prometheus → metrics
+- Loki → logs
+- Jaeger → traces
+
+---
+
+### 2. Streaming Layer
+
+Kafka-like in-memory system:
+
+- Producer → generates events  
+- Stream → shared queue  
+- Consumer → processes data  
+
+✔ asynchronous  
+✔ decoupled  
+✔ real-time simulation  
+
+---
+
+### 3. Feature Engineering
+
+We transform raw signals into meaningful features:
+
+- rolling statistics
+- z-score normalization
+- cross-service correlation
+
+---
+
+### 4. Anomaly Detection
+
+#### Isolation Forest
+- fast, unsupervised
+- detects point anomalies
+- no temporal awareness
+
+#### LSTM
+- captures sequential behavior
+- detects gradual degradation
+
+#### Combined Approach
+- IF → primary detector  
+- LSTM → temporal context  
+
+---
+
+###  Baseline Drift Problem
+
+When systems degrade over time:
+- model may treat degraded state as normal
+
+Solution:
+- change detection
+- regime-aware logic
+
+---
+
+##  Root Cause Analysis (Core)
+
+### Problem
 
 ```
-project_2/
-├── config.yaml           # Central configuration
-├── requirements.txt
-├── ingestion/            # Simulate Prometheus/Loki/Jaeger
-├── streaming/            # In-memory Kafka-compatible bus
-├── features/             # Rolling stats, z-scores, cross-service correlation
-├── detection/            # IsolationForest anomaly detection
-├── graph/                # NetworkX service dependency graph
-├── rca/                  # Root cause analysis engine
-├── decision/             # Rule-based action mapper
-├── remediation/          # Kubernetes client (dry-run by default)
-├── pipeline/             # End-to-end orchestrator
-├── api/                  # FastAPI REST endpoints
-├── dashboard/            # Real-time web UI
-└── tests/                # Unit + integration tests
+auth ↑
+payment ↑
+db ↑
 ```
 
-## 🚀 Quick Start
+Which one is the cause?
 
-### 1. Install dependencies
-```bash
-pip install -r requirements.txt
+---
+
+### Solution: Dependency Graph
+
+```
+auth → payment → database
 ```
 
-### 2. Run the platform
-```bash
-uvicorn api.main:app --reload --port 8000
+---
+
+### Causal Attribution
+
+```
+score(service) = anomaly_score - dependency_influence
 ```
 
-### 3. Open Dashboard
+Interpretation:
+- anomaly + normal dependencies → root cause  
+- anomaly + anomalous dependencies → propagated  
+
+---
+
+###  Key Insight
+
+> “Which service cannot explain its anomaly?”
+
+---
+
+##  Decision & Remediation
+
+### Decision Engine
+- rule-based
+- deterministic
+- explainable
+
+### Remediation Layer
+- restart services
+- scale deployments
+- simulate recovery
+
+---
+
+### Why This Matters
+
+Without CURA:
 ```
-http://localhost:8000/dashboard
+detect → alert → human → fix
 ```
 
-### 4. Inject a failure scenario
-Click **💥 Inject DB Failure** in the dashboard, or:
-```bash
-curl -X POST http://localhost:8000/simulate \
-  -H "Content-Type: application/json" \
-  -d '{"services": ["database-service", "payment-service", "auth-service"], "duration_s": 60}'
+With CURA:
+```
+detect → diagnose → act
 ```
 
-## 🧪 Run Tests
-```bash
-pytest tests/ -v
-```
+---
 
-## 🔌 API Endpoints
+##  Performance
 
-| Endpoint | Method | Description |
-|---|---|---|
-| `/dashboard` | GET | Web dashboard |
-| `/status` | GET | Pipeline health |
-| `/metrics` | GET | Latest raw metrics |
-| `/anomalies` | GET | Anomaly scores per service |
-| `/rca` | GET | Root cause result |
-| `/decision` | GET | Recommended action |
-| `/audit` | GET | Remediation audit log |
-| `/graph` | GET | Service dependency graph |
-| `/simulate` | POST | Inject failure scenario |
-| `/clear` | POST | Clear active failure |
-| `/state` | GET | Full state (dashboard polling) |
+- Initial: ~15s  
+- Optimized: **<5s per anomaly**  
+- ~66% improvement  
 
-## ⚙️ Configuration (`config.yaml`)
+---
 
-| Key | Default | Description |
-|---|---|---|
-| `remediation.dry_run` | `true` | Set `false` for real K8s actions |
-| `detection.anomaly_threshold` | `0.6` | Score cutoff for anomaly flag |
-| `rca.confidence_threshold` | `0.5` | Min confidence for auto-remediation |
-| `features.rolling_window` | `10` | Sliding window size for features |
+##  Key Features
 
-## 🔄 Pipeline Timing
+- Real-time pipeline  
+- Hybrid anomaly detection  
+- Graph-based RCA  
+- Automated remediation  
+- Lightweight architecture  
 
-| Step | Time |
-|---|---|
-| Ingestion | ~1–2s |
-| Feature extraction | ~1s |
-| ML inference | ~1–2s |
-| RCA | ~1s |
-| Decision + remediation | ~1s |
-| **Total** | **~7–10s** ✅ |
+---
 
-## 🧠 Key Design Decisions
+##  Limitations
 
-- **No Docker required**: uses in-memory streaming queue (Kafka-compatible interface)
-- **Dry-run by default**: K8s remediation is simulated safely without a cluster
-- **Causal attribution RCA**: scores services by anomaly contribution minus what's explained by their dependencies
-- **Auto-training**: models train on synthetic normal data if no persisted model found
+- static dependency graph  
+- heuristic causality  
+- limited production testing  
+
+---
+
+##  Future Work
+
+- learn dependencies dynamically  
+- probabilistic causality  
+- temporal propagation modeling  
+- confidence-based decisions  
+
+---
+
+##  Hackathon Experience
+
+Built in **36 hours**:
+- full system design
+- ML + backend + frontend
+- real-time debugging + optimization
+
+🏆 Top 15 out of ~80 teams
+
+---
+
+##  Conclusion
+
+> Observability alone is not enough.  
+> Systems must **understand failures and act on them**.
+
+---
+
