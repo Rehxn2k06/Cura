@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CURA : Real-Time AIOps for Detection, RCA & Autonomous Remediation
 
 ---
@@ -265,3 +266,4 @@ Built in **36 hours**:
 
 ---
 
+=======

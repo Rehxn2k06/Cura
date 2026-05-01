@@ -6,13 +6,13 @@ import { getFirestore } from "firebase/firestore";
 
 // 🔐 YOUR CONFIG
 const firebaseConfig = {
-  apiKey: "AIzaSyALP4laTflGHJdS3S2AorSybwDQJ-zc9_k",
-  authDomain: "Cura-a9c58.firebaseapp.com",
-  projectId: "Cura-a9c58",
-  storageBucket: "Cura-a9c58.firebasestorage.app",
-  messagingSenderId: "1078175424403",
-  appId: "1:1078175424403:web:a50f668b6ff1e78aeb5266",
-  measurementId: "G-F0L9WTKZHN",
+  apiKey: " ",
+  authDomain: " ",
+  projectId:  " ",
+  storageBucket: " ",
+  messagingSenderId: " ",
+  appId:  ",
+  measurementId: " ",
 };
 
 // ✅ Prevent multiple initialization (VERY IMPORTANT)
