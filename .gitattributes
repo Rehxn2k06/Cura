@@ -1,2 +1,11 @@
+# Ignore frontend languages
 *.js linguist-detectable=false
 *.ts linguist-detectable=false
+*.jsx linguist-detectable=false
+*.tsx linguist-detectable=false
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+
+# Ignore frontend folders entirely
+frontend/* linguist-vendored=true
+dashboard/* linguist-vendored=true

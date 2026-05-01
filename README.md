@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CURA : Real-Time AIOps for Detection, RCA & Autonomous Remediation
 
 ---
@@ -101,9 +100,9 @@ Kafka-like in-memory system:
 - Stream → shared queue  
 - Consumer → processes data  
 
-✔ asynchronous  
-✔ decoupled  
-✔ real-time simulation  
+- asynchronous  
+- decoupled  
+- real-time simulation  
 
 ---
 
@@ -255,7 +254,7 @@ Built in **36 hours**:
 - ML + backend + frontend
 - real-time debugging + optimization
 
-🏆 Top 15 out of ~80 teams
+ Top 15 out of ~80 teams
 
 ---
 
